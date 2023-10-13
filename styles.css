@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/sunny.jpg");
+  height: 100vh;
+  /* width: 100px; */
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Work Sans', sans-serif;
+  background-size: cover;
+}
+
+.app-main {
+  width: 60vh;
+  margin: 1% auto;
+  background-color: rgba(240, 248, 255, 0.5);
+  box-shadow: 0px 9px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.searchInputBox {
+  display: flex;
+}
+
+.app-main > * {
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  outline: none;
+  color: #582233;
+  font-size: 1.2rem;
+  height: 50px;
+  border-radius: 8px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+#btn {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  outline: none;
+  color: #582233;
+  font-size: 1.2rem;
+  height: 50px;
+  border-radius: 8px;
+  padding: 0 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-box:focus {
+  background-color: rgba(255, 255, 255);
+}
+
+#btn:hover {
+  background-color: rgba(255, 255, 255);
+}
+
+.weather-body {
+  display: none;
+  color: #582233;
+  padding: 30px;
+  line-height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 65vh;
+  overflow: hidden;
+}
+
+#far {
+  position: relative;
+  top: -183px;
+  right: -300px;
+  transition: 0.5s;
+}
+
+.location-details {
+  font-weight: bold;
+}
+
+#cel {
+  padding: 20px;
+  position: relative;
+  top: 30px;
+  transition: 0.5s;
+}
+
+.temp {
+  font-size: 50pt;
+  font-weight: 700;
+  margin: 15px 0;
+  text-shadow: 2px 4px rgba(0, 0, 0, 0.3);
+  padding-bottom: 20px;
+}
+
+.min-max, .weather, .wind, .humidity {
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 15px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+}
+
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.slide-controls label.fahrenheit {
+  color: #000;
+}
+
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(left, #582233, #70293e, #883e55, #92475f);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#fahrenheit:checked ~ .slider-tab {
+  left: 50%;
+}
+
+#fahrenheit:checked ~ label.fahrenheit {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+
+#fahrenheit:checked ~ label.celsius {
+  color: #000;
+}
+
+#celsius:checked ~ label.fahrenheit {
+  color: #000;
+}
+
+#celsius:checked ~ label.celsius {
+  cursor: default;
+  user-select: none;
+}

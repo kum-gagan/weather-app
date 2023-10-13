@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="app-main">
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box" placeholder="Enter city name..." autocomplete="off">
+            <input type="button" value="Go" id="btn" onclick="eventCall()">
+        </div>
+        <div class="slide-controls">
+            <input type="radio" name="slide" id="celsius" onclick="celsiusCall()" checked>
+            <input type="radio" name="slide" id="fahrenheit" onclick="fahrenheitCall()" >
+            <label for="celsius" class="slide celsius">Celsius</label>
+            <label for="fahrenheit" class="slide fahrenheit">Fahrenheit</label>
+            <div class="slider-tab"></div>
+          </div>
+
+        <div class="weather-body">
+            <div class="location-details">
+                <div class="city" id="city"></div>
+                <div class="date" id="date"></div>
+            </div>
+
+            <div class="weather-status" id="cel">
+                <div class="temp" id="temp">11</div>
+                <div class="min-max" id="min-max">11</div>
+                <div class="weather" id="weather">11</div>
+                <div class="wind" id="wind">1</div>
+                <div class="humidity" id="humidity">11</div>
+                <div id="img"></div>
+
+            </div>
+            <div class="faren" id="far">
+                <div class="temp" id="temp1">45</div>
+                <div class="min-max" id="min-max1">44</div>
+                <div class="weather" id="weather1">45</div>
+                <div class="wind" id="wind1">33</div>
+                <div class="humidity" id="humidity1">12</div>
+                <div id="img1"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
