@@ -44,7 +44,7 @@ function showWeatherReport(weather) {
 
 
 
-    // FRENHEIT
+    // FARENHEIT
     let temperature1 = document.getElementById('temp1');
     temperature1.innerHTML = `${Math.round((weather.main.temp) * 9 / 5) + 32}&deg;F`;
 
